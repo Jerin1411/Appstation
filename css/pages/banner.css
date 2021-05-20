@@ -1,0 +1,15 @@
+.banner {
+  margin: 100px 0 0;
+  z-index: 1;
+}
+.banner__content h2:before {
+  content: "";
+  position: relative;
+  display: inline-block;
+  width: 29px;
+  height: 20px;
+  vertical-align: middle;
+  background-color: red;
+  background: url("/images/icons/up-arrow-particle.svg") 0 0 no-repeat;
+  margin: 0 15px 0 0;
+}

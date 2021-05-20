@@ -1,0 +1,9 @@
+.services__wrapper {
+  border: 1px solid #ECECEC;
+  display: block;
+  max-width: 200px;
+  border-radius: 12px;
+  background-color: #FAFAFB;
+  overflow: hidden;
+  transition: all 0.6s ease;
+}
