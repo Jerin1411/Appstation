@@ -518,7 +518,7 @@ h2 {
   left: 0;
   right: 75px;
   position: absolute;
-  background: url(/images/banner/banner-bg.png) 0 0 no-repeat;
+  background: url("../images/banner/banner-bg.png") 0 0 no-repeat;
   background-position: right;
   background-size: contain;
 }
@@ -529,7 +529,7 @@ h2 {
   /* left: 0; */
   right: 8%;
   position: absolute;
-  background: url(/images/bg/banner-particle.png) 0 0 no-repeat;
+  background: url("../images/bg/banner-particle.png") 0 0 no-repeat;
   background-position: right;
   width: 1393px;
   height: 388px;
