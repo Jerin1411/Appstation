@@ -19,6 +19,10 @@
             overflow: hidden;
             position: relative;
 
+            @media (max-width: 767px) {
+                padding-right: 0px;
+            }
+
             &__holder {
                 background: rgb(242, 243, 246);
                 background-image: linear-gradient(289deg, rgba(242, 243, 246, 1) 0%, rgba(255, 255, 255, 1) 100%);
@@ -82,12 +86,12 @@
             border-radius: 20px;
         }
         .slick-prev {
-            background: url("/images/icons/slide-prev.svg") no-repeat;
+            background: url("../images/icons/slide-prev.svg") no-repeat;
             left: -116px;
             background-position: center;
         }
         .slick-next {
-            background: url("/images/icons/slide-next.svg") no-repeat;
+            background: url("../images/icons/slide-next.svg") no-repeat;
             right: -105px;
             background-position: center;
         }

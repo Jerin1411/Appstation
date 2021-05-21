@@ -159,6 +159,12 @@ h2 {
   top: 0;
   height: 150px;
 }
+@media (max-width: 767px) {
+  .header {
+    height: 90px;
+    margin: 0;
+  }
+}
 .header .container {
   max-width: 100%;
   margin: 0 60px;
@@ -168,13 +174,31 @@ h2 {
     margin: 0 30px;
   }
 }
+@media (max-width: 767px) {
+  .header .container {
+    margin: 0;
+  }
+}
 .header .header__logo__holder {
   display: flex;
   align-items: center;
   padding-top: 40px;
 }
+@media (max-width: 767px) {
+  .header .header__logo__holder {
+    padding-top: 0px;
+  }
+}
+.header .header__logo__holder .header__logo img {
+  width: 200px;
+}
 .header__nav__holder {
   padding: 55px 0 0 0;
+}
+@media (max-width: 767px) {
+  .header__nav__holder {
+    padding: 20px 0 0 0;
+  }
 }
 @media (max-width: 767px) {
   .menu-open .header__nav__holder .nav__responsive {
@@ -266,47 +290,19 @@ h2 {
     padding: 0px 5px 0px 10px;
   }
 }
-.header__nav__holder .header__nav ul li a:before {
-  position: absolute;
-  top: 12px;
-  left: 50%;
-  width: 50px;
-  height: 50px;
-  border: 2px solid #00A0DF;
-  transform: translateX(-50%) translateY(-50%) scale(0.8);
-  border-radius: 50%;
-  background: transparent;
-  content: "";
-  opacity: 0;
-  transition: all 0.3s;
-  z-index: -1;
-}
-.header__nav__holder .header__nav ul li a:after {
-  position: absolute;
-  top: 12px;
-  left: 50%;
-  width: 50px;
-  height: 50px;
-  border: 1px solid #00A0DF;
-  transform: translateX(-50%) translateY(-50%) scale(0.8);
-  border-radius: 50%;
-  background: transparent;
-  content: "";
-  opacity: 0;
-  transition: all 0.3s;
-  z-index: -1;
-}
-.header__nav__holder .header__nav ul li a:after {
-  border-width: 0.5px;
-  transition: all 0.4s;
-}
 .header__nav__holder .header__nav ul li a:hover:after {
-  opacity: 1;
-  transform: translateX(-50%) translateY(-50%) scale(1);
+  width: 60%;
 }
-.header__nav__holder .header__nav ul li a:hover:before {
-  opacity: 1;
-  transform: translateX(-50%) translateY(-50%) scale(1.3);
+.header__nav__holder .header__nav ul li a:after {
+  position: absolute;
+  left: 26px;
+  bottom: 0;
+  display: inline-block;
+  content: "";
+  width: 0;
+  height: 1px;
+  background-color: #00A0DF;
+  transition: width 0.3s;
 }
 .header__nav__holder .hamburger {
   cursor: pointer;
@@ -392,47 +388,19 @@ h2 {
     font-size: 13px;
   }
 }
-.footer__menu ul li a:before {
-  position: absolute;
-  top: 7px;
-  left: 50%;
-  width: 30px;
-  height: 30px;
-  border: 2px solid #00A0DF;
-  transform: translateX(-50%) translateY(-50%) scale(0.8);
-  border-radius: 50%;
-  background: transparent;
-  content: "";
-  opacity: 0;
-  transition: all 0.3s;
-  z-index: -1;
-}
-.footer__menu ul li a:after {
-  position: absolute;
-  top: 7px;
-  left: 50%;
-  width: 30px;
-  height: 30px;
-  border: 1px solid #00A0DF;
-  transform: translateX(-50%) translateY(-50%) scale(0.8);
-  border-radius: 50%;
-  background: transparent;
-  content: "";
-  opacity: 0;
-  transition: all 0.3s;
-  z-index: -1;
-}
-.footer__menu ul li a:after {
-  border-width: 0.5px;
-  transition: all 0.4s;
-}
 .footer__menu ul li a:hover:after {
-  opacity: 1;
-  transform: translateX(-50%) translateY(-50%) scale(1);
+  width: 100%;
 }
-.footer__menu ul li a:hover:before {
-  opacity: 1;
-  transform: translateX(-50%) translateY(-50%) scale(1.3);
+.footer__menu ul li a:after {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: inline-block;
+  content: "";
+  width: 0;
+  height: 1px;
+  background-color: #00A0DF;
+  transition: width 0.3s;
 }
 .footer__menu__holder {
   display: flex;
@@ -513,29 +481,32 @@ h2 {
 }
 .banner:before {
   content: " ";
-  top: 15px;
-  bottom: 0px;
-  left: 0;
-  right: 75px;
   position: absolute;
   background: url("../images/banner/banner-bg.png") 0 0 no-repeat;
   background-position: right;
   background-size: contain;
+  top: 0;
+  bottom: 0px;
+  right: 90px;
+  width: 750px;
 }
-.banner:after {
-  content: " ";
-  /* top: 75%; */
-  bottom: -14%;
-  /* left: 0; */
-  right: 8%;
-  position: absolute;
-  background: url("../images/bg/banner-particle.png") 0 0 no-repeat;
-  background-position: right;
-  width: 1393px;
-  height: 388px;
+@media (max-width: 1199px) {
+  .banner:before {
+    width: 445px;
+  }
+}
+@media (max-width: 767px) {
+  .banner:before {
+    display: none;
+  }
 }
 .banner__content {
-  max-width: 800px;
+  max-width: 645px;
+}
+@media (max-width: 1199px) {
+  .banner__content {
+    max-width: 480px;
+  }
 }
 .banner__content h2 {
   font-size: 80px;
@@ -544,12 +515,22 @@ h2 {
   font-family: "Poppins";
   position: relative;
 }
+@media (max-width: 1199px) {
+  .banner__content h2 {
+    font-size: 50px;
+  }
+}
+@media (max-width: 576px) {
+  .banner__content h2 {
+    font-size: 30px;
+  }
+}
 .banner__content h2:before {
   content: "";
   display: inline-block;
   width: 50px;
   height: 50px;
-  background: url(/images/icons/particle-up-blue.svg) 0 0 no-repeat;
+  background: url("../images/icons/particle-up-blue.svg") 0 0 no-repeat;
   background-size: contain;
   position: absolute;
   left: -57px;
@@ -562,24 +543,64 @@ h2 {
   font-family: "Poppins";
   margin-bottom: 25px;
 }
+@media (max-width: 767px) {
+  .banner__content p {
+    font-size: 13px;
+  }
+}
 .banner .banner_content__wrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-height: 890px;
+  min-height: 645px;
+}
+@media (max-width: 1199px) {
+  .banner .banner_content__wrapper {
+    min-height: 460px;
+  }
+}
+@media (max-width: 767px) {
+  .banner .banner_content__wrapper {
+    min-height: 295px;
+    justify-content: flex-start;
+  }
 }
 .banner .banner_content__wrapper .banner__left__bar {
   position: absolute;
   bottom: 0;
-  left: 0;
+  left: -122px;
   padding: 28px 35px;
   text-align: right;
   width: 520px;
   border-radius: 0 20px 20px 0px;
   box-shadow: 0 1px 17px rgba(36, 65, 93, 0.16);
 }
+@media (max-width: 1199px) {
+  .banner .banner_content__wrapper .banner__left__bar {
+    padding: 20px 35px;
+    width: 460px;
+    bottom: -60px;
+  }
+}
+@media (max-width: 767px) {
+  .banner .banner_content__wrapper .banner__left__bar {
+    bottom: 3px;
+  }
+}
+@media (max-width: 576px) {
+  .banner .banner_content__wrapper .banner__left__bar {
+    padding: 15px 25px;
+    width: 410px;
+    bottom: 15px;
+  }
+}
 .banner .banner_content__wrapper .banner__left__bar span {
   font-size: 14px;
+}
+@media (max-width: 576px) {
+  .banner .banner_content__wrapper .banner__left__bar span {
+    font-size: 12px;
+  }
 }
 .banner .banner_content__wrapper .banner__left__bar a {
   color: #E1251B;
@@ -592,6 +613,16 @@ h2 {
   padding: 155px 0px;
   min-height: 700px;
 }
+@media (max-width: 767px) {
+  .services {
+    padding: 70px 0px;
+  }
+}
+@media (max-width: 767px) {
+  .services {
+    padding: 30px 0px;
+  }
+}
 .services h2 {
   padding-left: 45px;
 }
@@ -602,7 +633,12 @@ h2 {
 }
 @media (max-width: 767px) {
   .services h2 {
-    font-size: 20px;
+    font-size: 18px;
+  }
+}
+@media (max-width: 576px) {
+  .services h2 {
+    padding: 0 0 10px 5px;
   }
 }
 .services h2:before {
@@ -610,7 +646,7 @@ h2 {
   display: inline-block;
   width: 50px;
   height: 50px;
-  background: url(/images/icons/particle-up-red.svg) 0 0 no-repeat;
+  background: url("../images/icons/particle-up-red.svg") 0 0 no-repeat;
   margin: 0 15px 0 0;
   background-size: contain;
   position: absolute;
@@ -764,7 +800,7 @@ h2 {
   display: inline-block;
   width: 40px;
   height: 40px;
-  background: url(/images/icons/particle-up-red.svg);
+  background: url("../images/icons/particle-up-red.svg");
   margin: 0 15px 0 0;
   background-size: contain;
   background-repeat: no-repeat;
@@ -835,6 +871,11 @@ h2 {
   overflow: hidden;
   position: relative;
 }
+@media (max-width: 767px) {
+  .our__work__slider__item {
+    padding-right: 0px;
+  }
+}
 .our__work__slider__item__holder {
   background: #f2f3f6;
   background-image: linear-gradient(289deg, #f2f3f6 0%, white 100%);
@@ -900,12 +941,12 @@ h2 {
   border-radius: 20px;
 }
 .our__work .slick-slider-1 .slick-prev {
-  background: url("/images/icons/slide-prev.svg") no-repeat;
+  background: url("../images/icons/slide-prev.svg") no-repeat;
   left: -116px;
   background-position: center;
 }
 .our__work .slick-slider-1 .slick-next {
-  background: url("/images/icons/slide-next.svg") no-repeat;
+  background: url("../images/icons/slide-next.svg") no-repeat;
   right: -105px;
   background-position: center;
 }
